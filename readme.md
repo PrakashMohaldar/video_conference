@@ -21,7 +21,7 @@ cd ./video_conference
 ```
 2. Compile the `transmit.c` file:
 ```bash
-g++ -o initiate receive.c $(pkg-config --cflags --libs gstreamer-1.0)
+g++ -o initiate transmit.c $(pkg-config --cflags --libs gstreamer-1.0)
 
 ```
 3. Initiate the call by executing the compiled program with the IP address of the receiver (Device 2):
@@ -36,7 +36,7 @@ cd ./video_conference
 ```
 2. Compile the `receive.c` file:
 ```bash
-./initiate <Device_2_IP_address>
+g++ -o initiate receive.c $(pkg-config --cflags --libs gstreamer-1.0)
 ```
 3. Receive the call by executing the compiled program with the IP address of the sender (Device 1):
 ```bash
